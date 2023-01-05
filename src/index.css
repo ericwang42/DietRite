@@ -1,13 +1,160 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #FFDFCC;
+}
+
+.App {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MealPlanner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
+    margin: 2rem 0 1rem 0;
+}
+
+.Title {
+    font-size: xx-large;
+}
+
+
+.controls {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    text-align: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #FFA40F;
+    color: black;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #FFA40F;
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nutrients ul {
+    display: flex;
+    width: 40rem;
+    justify-content: space-evenly;
+}
+
+ul{
+    list-style: none;
+}
+
+.meals {
+    display: flex;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 0 1rem;
+    max-width: 18rem;
+    box-shadow: 0 4px 8px 2px rgba(77,77,77,0.15);
+}
+
+.instructions {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    background-color:#FFA40F;
+    color: white;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #e4920d;
+}
+.about_section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    color: black;
+    font-size: large;
+}
+
+.spacer {
+    color: white;
+    font-size: large;
+}
+
+.homepage_title {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(255, 223, 204, 0.75);
+    color: #FFA40F;
+    font-size: xx-large;
+}
+
+.homepage_title:before {
+    content: '';
+    background: url('./assets/plate.jpg') no-repeat center center/cover;
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+
+@media only screen and (max-width: 550px) {
+    .meals {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nutrients ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }
